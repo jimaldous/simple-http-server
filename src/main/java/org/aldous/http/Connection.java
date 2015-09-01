@@ -93,7 +93,7 @@ public class Connection implements Runnable {
 					} else {
 						res.getHeaders().put("Connection", "close");
 					}
-					LOG.info("result: " + res);
+					LOG.debug("result: " + res);
 					if (res.getStatusLine() != null) {
 						LOG.info("Writing result (" + res.getStatusLine() + ")");
 						outWriter.print(res.toString());
